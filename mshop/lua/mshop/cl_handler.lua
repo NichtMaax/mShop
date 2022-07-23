@@ -20,20 +20,4 @@
     end) 
 
 
-    local owner_id = mShop.Owner
-    local server_hostname = GetHostName()
-    local server_ip = game.GetIPAddress()
-
-    http.Post( "https://maax-development.de/api/server/customers/auth", { server-ip = "test", server-owner = "test", server-name = "test"},
-
-	-- onSuccess function
-	function( body, length, headers, code )
-		print( "Done!" )
-	end,
-
-	-- onFailure function
-	function( message )
-		print( message )
-	end
-
-    )
+    version_print()
